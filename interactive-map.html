@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Интерактивная карта</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Верхнее меню остаётся прежним -->
+  <header class="site-header">
+    <h1>Интерактивная карта: выберите метод</h1>
+  </header>
+  <nav class="main-menu">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="table-of-contents.html">Содержание</a></li>
+    </ul>
+  </nav>
+
+  <!-- Новый блок "пула" для карты -->
+  <div id="mapPool">
+    <!-- Внутри пула будет находиться сама карта -->
+    <div id="mapContent">
+      <!-- Корневой узел в центре виртуального холста -->
+      <div id="rootNode" class="node" style="top: 900px; left: 1000px;">
+        <a href="page1.html">Корневой узел</a>
+      </div>
+      <!-- Ветка 1 – левее -->
+      <div class="node" style="top: 1100px; left: 800px;">
+        <a href="page2.html">Ветка 1</a>
+      </div>
+      <!-- Ветка 2 – правее -->
+      <div class="node" style="top: 1100px; left: 1200px;">
+        <a href="page3.html">Ветка 2</a>
+      </div>
+    </div>    
+  </div>
+
+  <!-- Можно убрать кнопку, если она больше не нужна -->
+  <!-- <button id="startMapBtn">Начать подбор метода</button> -->
+
+  <footer class="site-footer">
+    <p><a href="index.html">← Вернуться на главную</a></p>
+  </footer>
+
+  <script src="map.js"></script>
+</body>
+</html>

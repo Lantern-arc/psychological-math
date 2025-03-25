@@ -1,0 +1,123 @@
+/* Сброс отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Стиль для тела страницы */
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+  }
+  
+  /* Шапка сайта */
+  .site-header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .site-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.4em;
+  }
+  .site-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Меню навигации */
+  .main-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #ddd;
+    margin: 0;
+    padding: 10px;
+  }
+  .main-menu li {
+    margin: 0 10px;
+  }
+  .main-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+  }
+  .main-menu a:hover {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Основной контент */
+  .main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Футер */
+  .site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #fafafa;
+    color: #666;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Адаптивное меню для мобильных */
+  @media (max-width: 600px) {
+    .main-menu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-menu li {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Отключаем прокрутку для всей страницы */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Стили для пула, который занимает весь экран */
+#mapPool {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #eef;  /* Светлый фон для теста, можно заменить на ваш футуристический */
+}
+
+/* Стили для содержимого карты */
+#mapContent {
+  position: absolute;
+  width: 2000px;   /* Ширина виртуального холста */
+  height: 2000px;  /* Высота виртуального холста */
+  transform-origin: top left;
+  transform: translate(0px, 0px) scale(1);
+}
+
+/* Пример стилей для узлов карты */
+.node {
+  position: absolute;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Для наглядности можно добавить небольшую тень */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.node a {
+  text-decoration: none;
+  color: #333;
+}
